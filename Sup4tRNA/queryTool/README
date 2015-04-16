@@ -1,0 +1,24 @@
+This is the package for querying Sprinzl's aligned database.
+1. query.py is the script that does the job.
+2. filter.in is the input file that need user to define the querying terms.
+it looks like this:
+#define locations and bases for the filter. The location number is real index not system numbering
+#locations	base (accept both U and T)
+18	G
+20	!T
+22     U
+
+User need to edit the columns of positons, which is using the real index not systematic numbering. The indexing can certainly be changed to systematic way, but I figured it might be somehow evern more confusing by defining variable loop. The base can be defined with "!" meaning NOT, both U and G will be accepted.
+
+The usage:
+Mac or linux users can open the query folder and type in terminals:
+query1.0.py filter.in prefix_output
+
+3. output files:
+each single piece of query will have a individual output file, which takes the prefix_output from commandline as the prefix for output files. Then a output prefix_all.out will hold all the crossing filtered outputs.
+
+4. tRNAs.mfa
+the Sprinzl's 9758 fasta sequences database.
+
+5. tRNA_index
+the indexing reference for the numbering, which will helps to locate the positions you want to search.

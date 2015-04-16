@@ -1,0 +1,7 @@
+#define locations and bases(accept both U and T) for the filter. 
+#The location number is real index not system numbering. 
+#The base can be defined with "!" meaning NOT, both U and G will be accepted.
+#locations	base
+18	G
+20	!U
+22	C
